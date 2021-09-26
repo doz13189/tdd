@@ -10,6 +10,10 @@ class Dollar {
     return new Dollar(this._amount * multipler)
   }
 
+  equals(dollar: Dollar): boolean {
+    return this._amount === dollar.amount
+  }
+
   get amount(): number {
     return this._amount
   }
