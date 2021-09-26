@@ -1,4 +1,5 @@
 import { Dollar } from "../../src/Dollar";
+import { Franc } from "../../src/Franc";
 
 test('ドルの掛け算のテスト', () => {
 
@@ -15,3 +16,10 @@ test('ドルを比較するテスト', () => {
 
 });
 
+test('フランを比較するテスト', () => {
+
+  const five = new Franc(5)
+  expect(five.times(2)).toStrictEqual(new Franc(10))
+  expect(five.times(3)).toStrictEqual(new Franc(15))
+
+});
