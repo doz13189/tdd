@@ -6,7 +6,7 @@ class Franc extends Money {
     super(amount)
   }
 
-  times(multipler: number): Franc {
+  times(multipler: number): Money {
     return new Franc(this._amount * multipler)
   }
 

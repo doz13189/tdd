@@ -6,9 +6,10 @@ class Dollar extends Money {
     super(amount)
   }
 
-  times(multipler: number): Dollar {
+  times(multipler: number): Money {
     return new Dollar(this._amount * multipler)
   }
+  
 }
 
 export {
