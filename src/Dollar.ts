@@ -1,21 +1,13 @@
-class Dollar {
+import { Money } from "./Money"
 
-  private _amount
+class Dollar extends Money {
 
   constructor(amount: number) {
-    this._amount = amount
+    super(amount)
   }
 
   times(multipler: number): Dollar {
     return new Dollar(this._amount * multipler)
-  }
-
-  equals(dollar: Dollar): boolean {
-    return this._amount === dollar.amount
-  }
-
-  get amount(): number {
-    return this._amount
   }
 }
 

@@ -1,22 +1,15 @@
-class Franc {
+import { Money } from "./Money"
 
-  private _amount
+class Franc extends Money {
 
   constructor(amount: number) {
-    this._amount = amount
+    super(amount)
   }
 
   times(multipler: number): Franc {
     return new Franc(this._amount * multipler)
   }
 
-  equals(franc: Franc): boolean {
-    return this._amount === franc.amount
-  }
-
-  get amount(): number {
-    return this._amount
-  }
 }
 
 export {
