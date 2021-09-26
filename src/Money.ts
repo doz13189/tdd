@@ -7,7 +7,7 @@ class Money {
   }
 
   equals(money: Money): boolean {
-    return this._amount === money.amount
+    return this._amount === money.amount && this.constructor.name === money.constructor.name
   }
 
   get amount(): number {
