@@ -1,4 +1,4 @@
-abstract class Money {
+class Money {
 
   protected _amount
   protected _currency
@@ -9,10 +9,16 @@ abstract class Money {
   }
 
   equals(money: Money): boolean {
-    return this._amount === money.amount && this.constructor.name === money.constructor.name
+    return this._amount === money.amount && this._currency === money.currency
   }
 
-  abstract times(amount: number): void
+  times(multipler: number): Money {
+    return new Money(this._amount * multipler, this._currency)
+  }
+
+  toString() {
+    return this._amount + ' ' + this._currency
+  }
 
   get amount(): number {
     return this._amount

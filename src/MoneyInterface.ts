@@ -1,19 +1,18 @@
-import { Dollar } from './Dollar';
-import { Franc } from './Franc';
 import { Money } from "./Money"
 
 
-class MoneyType {
+class MoneyInterface {
+
   static dollar(amount: number): Money {
-    return new Dollar(amount, 'USD')
+    return new Money(amount, 'USD')
   }
   
   static franc(amount: number): Money {
-    return new Franc(amount, 'CHF')
+    return new Money(amount, 'CHF')
   }
   
 }
 
 export {
-  MoneyType
+  MoneyInterface
 }
