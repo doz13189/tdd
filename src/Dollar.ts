@@ -1,15 +1,16 @@
 import { Money } from "./Money"
+import { MoneyType } from "./MoneyInterface"
 
 class Dollar extends Money {
 
-  constructor(amount: number) {
-    super(amount)
+  constructor(amount: number, currency: string) {
+    super(amount, currency)
   }
 
   times(multipler: number): Money {
-    return new Dollar(this._amount * multipler)
+    return MoneyType.dollar(this._amount * multipler)
   }
-  
+
 }
 
 export {

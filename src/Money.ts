@@ -1,12 +1,11 @@
-import { Dollar } from './Dollar';
-import { Franc } from './Franc';
-
 abstract class Money {
 
   protected _amount
+  protected _currency
 
-  constructor(amount: number) {
+  constructor(amount: number, currency: string) {
     this._amount = amount
+    this._currency = currency
   }
 
   equals(money: Money): boolean {
@@ -15,19 +14,16 @@ abstract class Money {
 
   abstract times(amount: number): void
 
-  static dollar(amount: number): Money {
-    return new Dollar(amount)
-  }
-
-  static franc(amount: number): Money {
-    return new Franc(amount)
-  }
-
   get amount(): number {
     return this._amount
   }
 
+  get currency(): string {
+    return this._currency
+  }
+
 }
+
 
 export {
   Money
